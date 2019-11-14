@@ -1,0 +1,7 @@
+.nav
+  .nav__logo
+  .nav__menu
+    - sitemap.resources.each do |f|
+      = if f.content_type && (f.content_type.include? "html")
+       li
+         a href=f.path =f.data.title
